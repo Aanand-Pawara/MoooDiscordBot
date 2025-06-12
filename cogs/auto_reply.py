@@ -29,6 +29,8 @@ class AutoReply(commands.Cog):
             await message.channel.send("Hey. What's up?")
         elif 'aanand' in content:
             await message.channel.send("shut up.")
+        elif 'mod' in content:
+            await message.channel.send("Mod is being worked on. Stay brutal.")
         elif 'update' in content:
             if any(role.name == "Admin" for role in message.author.roles):
                 await message.channel.send("You're an Admin. You *know* we're working on it.")
