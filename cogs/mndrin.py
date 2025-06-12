@@ -35,7 +35,7 @@ class MNDRiNResponder(commands.Cog):
         mentioned = any(user.id == MNDRIN_ID for user in message.mentions)
 
 
-        if 'mndrin' in content_lower or mentioned:
+        if 'mndrin' in content_lower or 'rin' in content_lower or mentioned:
             await message.channel.send(random.choice(self.responses))
 
 async def setup(bot):

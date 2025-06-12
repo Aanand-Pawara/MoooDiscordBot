@@ -1,6 +1,8 @@
 from discord.ext import commands
 import time
 
+from cogs.responser import Responder
+
 class AutoReply(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -34,6 +36,8 @@ class AutoReply(commands.Cog):
                 await message.channel.send("You're MNDRiN. No updates for you. You write them.")
             else:
                 await message.channel.send("Update is being worked on. Stay brutal.")
+        elif 'bye' in content:
+            await message.channel.send(embed=Responder.error("Fuck"))
 
 async def setup(bot):
     await bot.add_cog(AutoReply(bot))
